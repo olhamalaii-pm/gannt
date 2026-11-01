@@ -1,0 +1,209 @@
+{
+  "project": "Алексшоу",
+  "start": "2026-11-02",
+  "deadline": "",
+  "hpd": 6,
+  "buffer": 20,
+  "pmPct": 10,
+  "currency": "$",
+  "daysOff": "",
+  "demo": false,
+  "roles": [
+    {
+      "role": "Dev",
+      "count": 1,
+      "rate": 0,
+      "color": "#3d6fd6"
+    },
+    {
+      "role": "QA",
+      "count": 1,
+      "rate": 0,
+      "color": "#e08a2e"
+    },
+    {
+      "role": "PM",
+      "count": 0,
+      "rate": 0,
+      "color": "#2a9db0"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "B1",
+      "phase": "Backend",
+      "name": "Реєстрація через email і пароль (без дублю акаунтів)",
+      "role": "Dev",
+      "hours": 1,
+      "deps": "R1"
+    },
+    {
+      "id": "B2",
+      "phase": "Backend",
+      "name": "Підтвердження email кодом",
+      "role": "Dev",
+      "hours": 1,
+      "deps": "B1"
+    },
+    {
+      "id": "B3",
+      "phase": "Backend",
+      "name": "Стан публікації: рев'ю, листи і push, причина відхилення",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "B1"
+    },
+    {
+      "id": "B4",
+      "phase": "Backend",
+      "name": "Approve / reject у списках Venues і Artists",
+      "role": "Dev",
+      "hours": 1,
+      "deps": "B3"
+    },
+    {
+      "id": "B5",
+      "phase": "Backend",
+      "name": "Пошук вендорів без rejected і under review",
+      "role": "Dev",
+      "hours": 1,
+      "deps": "B3"
+    },
+    {
+      "id": "B6",
+      "phase": "Backend",
+      "name": "Збереження даних візарду по кроках",
+      "role": "Dev",
+      "hours": 1,
+      "deps": "B1"
+    },
+    {
+      "id": "W1",
+      "phase": "WEB Vendor",
+      "name": "Сторінка коду з email + екран пароля, збереження прогресу",
+      "role": "Dev",
+      "hours": 1.5,
+      "deps": "B2"
+    },
+    {
+      "id": "W2",
+      "phase": "WEB Vendor",
+      "name": "Sign up на логіні + сторінка реєстрації з email",
+      "role": "Dev",
+      "hours": 1,
+      "deps": "B1"
+    },
+    {
+      "id": "W3",
+      "phase": "WEB Vendor",
+      "name": "Візард: акаунт, послуга, пакети, портфоліо, Artist/Location",
+      "role": "Dev",
+      "hours": 3,
+      "deps": "B6"
+    },
+    {
+      "id": "W4",
+      "phase": "WEB Vendor",
+      "name": "Відправка на рев'ю і повторне рев'ю, статус",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "B3, W3"
+    },
+    {
+      "id": "A1",
+      "phase": "WEB Admin",
+      "name": "Список вендорів зі статусом, approve/reject з причиною",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "B4"
+    },
+    {
+      "id": "M1",
+      "phase": "Mobile",
+      "name": "Екран входу Continue as Vendor",
+      "role": "Dev",
+      "hours": 0.5,
+      "deps": ""
+    },
+    {
+      "id": "M2",
+      "phase": "Mobile",
+      "name": "Реєстрація: email, код, пароль",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "B2, M1"
+    },
+    {
+      "id": "M3",
+      "phase": "Mobile",
+      "name": "Візард: акаунт, послуга, пакети, портфоліо",
+      "role": "Dev",
+      "hours": 4,
+      "deps": "B6, M2"
+    },
+    {
+      "id": "M4",
+      "phase": "Mobile",
+      "name": "Редагування пакетів",
+      "role": "Dev",
+      "hours": 3,
+      "deps": "M3"
+    },
+    {
+      "id": "M5",
+      "phase": "Mobile",
+      "name": "Редагування регулярних робочих днів",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "M3"
+    },
+    {
+      "id": "M6",
+      "phase": "Mobile",
+      "name": "Редагування загальної інформації вендора",
+      "role": "Dev",
+      "hours": 2.5,
+      "deps": "M3"
+    },
+    {
+      "id": "M7",
+      "phase": "Mobile",
+      "name": "Відправка на рев'ю і повторне рев'ю, статус",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "B3, M3"
+    },
+    {
+      "id": "R1",
+      "phase": "Спільне",
+      "name": "Ресерч",
+      "role": "Dev",
+      "hours": 2,
+      "deps": ""
+    },
+    {
+      "id": "Q1",
+      "phase": "Спільне",
+      "name": "Тестування",
+      "role": "QA",
+      "hours": 8,
+      "deps": "B5, W1, W2, W4, A1, M4, M5, M6, M7"
+    },
+    {
+      "id": "C1",
+      "phase": "Спільне",
+      "name": "Багфікс, оптимізація, рефакторинг",
+      "role": "Dev",
+      "hours": 3,
+      "deps": "Q1"
+    },
+    {
+      "id": "D1",
+      "phase": "Спільне",
+      "name": "Деплой, реліз",
+      "role": "Dev",
+      "hours": 2,
+      "deps": "C1"
+    }
+  ]
+}
