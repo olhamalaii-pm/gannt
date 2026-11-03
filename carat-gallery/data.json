@@ -1,0 +1,239 @@
+{
+  "project": "Carat Gallery — Feature Roadmap (Indicative)",
+  "start": "2026-11-09",
+  "deadline": "",
+  "hpd": 6,
+  "buffer": 20,
+  "pmPct": 10,
+  "currency": "$",
+  "daysOff": "21.12.2026, 22.12.2026, 23.12.2026, 24.12.2026, 25.12.2026, 28.12.2026, 29.12.2026, 30.12.2026, 31.12.2026, 01.01.2027",
+  "demo": false,
+  "roles": [
+    {
+      "role": "FE",
+      "count": 1,
+      "rate": 0,
+      "color": "#1b1b1b"
+    },
+    {
+      "role": "BE",
+      "count": 1,
+      "rate": 0,
+      "color": "#6c6c6c"
+    },
+    {
+      "role": "Design/QA",
+      "count": 1,
+      "rate": 0,
+      "color": "#ffc612"
+    },
+    {
+      "role": "Business Owner",
+      "count": 1,
+      "rate": 0,
+      "color": "#d6d6d6"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S1",
+      "phase": "Kick-off",
+      "name": "Scope and estimate approval",
+      "role": "Business Owner",
+      "hours": 30,
+      "deps": ""
+    },
+    {
+      "id": "J1",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "Owner-level iJewel access for frontend",
+      "role": "Business Owner",
+      "hours": 30,
+      "deps": "S1"
+    },
+    {
+      "id": "J2",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "Configurator setup: sample ring, 5 sizes × 8 shapes",
+      "role": "FE",
+      "hours": 30,
+      "deps": "J1"
+    },
+    {
+      "id": "J3",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "WordPress product fields for 3D models",
+      "role": "BE",
+      "hours": 18,
+      "deps": "J1"
+    },
+    {
+      "id": "J4",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "3D viewer on the product page",
+      "role": "FE",
+      "hours": 30,
+      "deps": "J2, J3"
+    },
+    {
+      "id": "J5",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "Try-On button and flow",
+      "role": "FE",
+      "hours": 18,
+      "deps": "J4"
+    },
+    {
+      "id": "J6",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "QA: 3D viewer and Try-On",
+      "role": "Design/QA",
+      "hours": 24,
+      "deps": "J5"
+    },
+    {
+      "id": "J7",
+      "phase": "3D Viewer & Virtual Try-On (iJewel)",
+      "name": "Bug fixing and release: 3D / Try-On",
+      "role": "FE",
+      "hours": 6,
+      "deps": "J6"
+    },
+    {
+      "id": "D1",
+      "phase": "Design Improvements",
+      "name": "Design concepts (screenshots for approval)",
+      "role": "Design/QA",
+      "hours": 36,
+      "deps": "S1"
+    },
+    {
+      "id": "D2",
+      "phase": "Design Improvements",
+      "name": "Design review and approval",
+      "role": "Business Owner",
+      "hours": 30,
+      "deps": "D1"
+    },
+    {
+      "id": "D3",
+      "phase": "Design Improvements",
+      "name": "Frontend implementation, part 1",
+      "role": "FE",
+      "hours": 30,
+      "deps": "D2, J7"
+    },
+    {
+      "id": "D4",
+      "phase": "Design Improvements",
+      "name": "Frontend implementation, part 2",
+      "role": "FE",
+      "hours": 30,
+      "deps": "D3"
+    },
+    {
+      "id": "D5",
+      "phase": "Design Improvements",
+      "name": "QA: design updates",
+      "role": "Design/QA",
+      "hours": 18,
+      "deps": "D4"
+    },
+    {
+      "id": "D6",
+      "phase": "Design Improvements",
+      "name": "Bug fixing and release: design updates",
+      "role": "FE",
+      "hours": 6,
+      "deps": "D5"
+    },
+    {
+      "id": "A1",
+      "phase": "AI Shopping Assistant",
+      "name": "Research: SKU data source, LLM choice, CG dashboard fit",
+      "role": "BE",
+      "hours": 18,
+      "deps": "S1"
+    },
+    {
+      "id": "A2",
+      "phase": "AI Shopping Assistant",
+      "name": "Approach decision",
+      "role": "Business Owner",
+      "hours": 18,
+      "deps": "A1"
+    },
+    {
+      "id": "A3",
+      "phase": "AI Shopping Assistant",
+      "name": "UX design: conversational product search",
+      "role": "Design/QA",
+      "hours": 36,
+      "deps": "A2"
+    },
+    {
+      "id": "A4",
+      "phase": "AI Shopping Assistant",
+      "name": "LLM integration and prompts",
+      "role": "BE",
+      "hours": 36,
+      "deps": "A2, J3"
+    },
+    {
+      "id": "A5",
+      "phase": "AI Shopping Assistant",
+      "name": "Catalog search via Typesense and SKU data",
+      "role": "BE",
+      "hours": 36,
+      "deps": "A4"
+    },
+    {
+      "id": "A6",
+      "phase": "AI Shopping Assistant",
+      "name": "Guardrails, logging, LLM cost limits",
+      "role": "BE",
+      "hours": 24,
+      "deps": "A5"
+    },
+    {
+      "id": "A7",
+      "phase": "AI Shopping Assistant",
+      "name": "Assistant widget and product results",
+      "role": "FE",
+      "hours": 36,
+      "deps": "A3, A5, D6"
+    },
+    {
+      "id": "A8",
+      "phase": "AI Shopping Assistant",
+      "name": "Mobile layout and error states",
+      "role": "FE",
+      "hours": 24,
+      "deps": "A7"
+    },
+    {
+      "id": "A9",
+      "phase": "AI Shopping Assistant",
+      "name": "QA: AI assistant",
+      "role": "Design/QA",
+      "hours": 30,
+      "deps": "A6, A8"
+    },
+    {
+      "id": "A10",
+      "phase": "AI Shopping Assistant",
+      "name": "Answer tuning based on QA results",
+      "role": "BE",
+      "hours": 18,
+      "deps": "A9"
+    },
+    {
+      "id": "A11",
+      "phase": "AI Shopping Assistant",
+      "name": "Bug fixing and soft launch",
+      "role": "FE",
+      "hours": 6,
+      "deps": "A10"
+    }
+  ]
+}
