@@ -13,19 +13,19 @@
       "role": "Dev",
       "count": 1,
       "rate": 40,
-      "color": "#3d6fd6"
+      "color": "#1b1b1b"
     },
     {
       "role": "QA",
       "count": 1,
       "rate": 22,
-      "color": "#e08a2e"
+      "color": "#ffc612"
     },
     {
       "role": "PM",
       "count": 0,
       "rate": 22,
-      "color": "#2a9db0"
+      "color": "#6c6c6c"
     }
   ],
   "tasks": [

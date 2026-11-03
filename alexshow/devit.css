@@ -1,0 +1,57 @@
+/* DevIT brand layer for this plan: Sora (Cyrillic falls back to Onest), near-black #1B1B1B, signature yellow #FFC612, neutral greys. Loaded after ../style.css. */
+:root{
+  --bg:#f7f7f7; --surface:#ffffff; --ink:#1b1b1b; --muted:#6c6c6c; --line:#e3e3e3;
+  --accent:#1b1b1b; --accent-soft:#fdecb7; --brand:#ffc612;
+  --crit:#de1818; --crit-soft:#fdeaea;
+  --grid:#f0f0f0; --week:#d6d6d6;
+  --font-display:"Sora","Onest",system-ui,sans-serif;
+  --font-body:"Sora","Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141414; --surface:#1b1b1b; --ink:#fcfcfc; --muted:#b5b5b5; --line:#3d3d3d;
+    --accent:#ffc612; --accent-soft:#3a3016; --crit:#ff5a5a; --crit-soft:#3a1a1a;
+    --grid:#222222; --week:#3d3d3d;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141414; --surface:#1b1b1b; --ink:#fcfcfc; --muted:#b5b5b5; --line:#3d3d3d;
+  --accent:#ffc612; --accent-soft:#3a3016; --crit:#ff5a5a; --crit-soft:#3a1a1a;
+  --grid:#222222; --week:#3d3d3d;
+}
+body{font-size:14px}
+
+/* Brand bar */
+body::before{
+  content:"DevIT  ·  Алексшоу";
+  display:flex;align-items:center;gap:12px;
+  height:60px;padding:0 max(20px,calc((100% - 1400px)/2 + 20px));
+  padding-left:max(64px,calc((100% - 1400px)/2 + 64px));
+  background:#1b1b1b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 33 45' fill='%23ffc612'%3E%3Cpath d='M1.8 17.2a1.8 1.8 0 1 0 0-3.7 1.8 1.8 0 0 0 0 3.7ZM14 32.7l-9.5 6.6c-.4.3-1 0-1-.5V21.1a1.7 1.7 0 1 0-3.4 0v22.2c0 1.4 1.6 2.2 2.7 1.4L32.3 24c1-.7 1-2.1 0-2.8-.6-.4-1.4-.4-2 0L14 32.7Z'/%3E%3Cpath d='m22.4 20-12.3 8.6c-.4.3-1 0-1-.5v-4.4c0-.5.4-.9.9-.9h.6c.9 0 1.6-.7 1.6-1.5V21c0-1-.8-1.7-1.7-1.7H7.2c-.8 0-1.5.7-1.5 1.5v13.8c0 .5.5.8 1 .5l4.3-3 16.6-11.7c.9-.6.9-1.9 0-2.5l-10-7L2.5.2C1.5-.4 0 .3 0 1.5V2c0 .5.3 1 .7 1.2l21.6 15.3a1 1 0 0 1 0 1.5Z'/%3E%3C/svg%3E") no-repeat;
+  background-size:22px 30px;
+  background-position:max(20px,calc((100% - 1400px)/2 + 20px)) center;
+  color:#fcfcfc;font:700 16px/1 var(--font-display);letter-spacing:.01em;
+  border-bottom:3px solid var(--brand);
+}
+.wrap{padding-top:28px}
+h1{font:800 28px/1.15 var(--font-display);letter-spacing:-.015em}
+
+/* Tiles: yellow rule on top, like DevIT cards */
+.tile{border-radius:14px;border-top:3px solid var(--brand)}
+.tile .v{font-weight:700;font-family:var(--font-display)}
+.panel{border-radius:16px}
+
+/* Tabs and buttons */
+.tabs a[aria-current="page"]{border-bottom:3px solid var(--brand);color:var(--ink);font-weight:600}
+button,.btn{border-radius:30px;padding:7px 16px}
+button:hover{border-color:var(--brand)}
+button.primary{background:var(--brand);border-color:var(--brand);color:#1b1b1b;font-weight:600}
+:root[data-theme="dark"] button.primary{color:#1b1b1b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button.primary{color:#1b1b1b}}
+button.on{background:var(--accent-soft);border-color:var(--brand);color:var(--ink)}
+:focus-visible{outline:2px solid var(--brand)}
+
+/* Bars on light brand colours need dark text */
+.bar[style*="#ffc612" i],.bar[style*="#d6d6d6" i]{color:#1b1b1b}
+.ms{background:var(--brand);box-shadow:0 0 0 1.5px #1b1b1b}
+.today{border-left-color:var(--brand)}
