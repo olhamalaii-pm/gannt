@@ -55,3 +55,9 @@ button.on{background:var(--accent-soft);border-color:var(--brand);color:var(--in
 .bar[style*="#ffc612" i],.bar[style*="#d6d6d6" i]{color:#1b1b1b}
 .ms{background:var(--brand);box-shadow:0 0 0 1.5px #1b1b1b}
 .today{border-left-color:var(--brand)}
+
+/* Dark theme: near-black role colour would vanish on the dark surface, so render it light */
+:root[data-theme="dark"] .bar[style*="#1b1b1b" i],:root[data-theme="dark"] .legend i[style*="#1b1b1b" i]{background:#fcfcfc!important;color:#1b1b1b}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .bar[style*="#1b1b1b" i],:root:not([data-theme="light"]) .legend i[style*="#1b1b1b" i]{background:#fcfcfc!important;color:#1b1b1b}
+}
