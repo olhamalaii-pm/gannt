@@ -13,25 +13,25 @@
       "role": "FE",
       "count": 1,
       "rate": 0,
-      "color": "#3d6fd6"
+      "color": "#1b1b1b"
     },
     {
       "role": "BE",
       "count": 1,
       "rate": 0,
-      "color": "#4a9e5c"
+      "color": "#6c6c6c"
     },
     {
       "role": "Design/QA",
       "count": 1,
       "rate": 0,
-      "color": "#e08a2e"
+      "color": "#ffc612"
     },
     {
       "role": "Клієнт",
       "count": 3,
       "rate": 0,
-      "color": "#8a8f99"
+      "color": "#d6d6d6"
     }
   ],
   "tasks": [
